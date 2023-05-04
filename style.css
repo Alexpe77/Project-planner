@@ -11,6 +11,7 @@ body {
 body h1 {
   text-align: center;
   padding: 10px;
+  background-color: #d4a373;
 }
 body .to-do-form {
   padding: 10px;
@@ -59,8 +60,9 @@ body .list-container ul {
   width: 300px;
   min-height: 100px;
   text-align: center;
-  background-color: white;
+  background-color: #faedcd;
   list-style-type: none;
+  border: 1px solid black;
 }
 body .list-container ul li {
   border: 1px solid black;

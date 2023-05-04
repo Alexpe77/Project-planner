@@ -7,6 +7,5 @@ export function doing_function(doing, doing_id, item) {
     to_do.appendChild(item);
     return;
   }
-
   doing_list.appendChild(item);
 }

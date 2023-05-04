@@ -1,10 +1,22 @@
 import { local_storage } from "./localstorage.js";
 import { doing_function } from "./doing_button.js";
+import { check } from "./check_function.js";
 export function add_task() {
   const task_input_value = document.querySelector(".task-input").value;
   const description_input_value = document.querySelector(".text-input").value;
   const date_input_value = document.querySelector(".date-input").value;
-  const list = document.querySelector("ul");
+  const to_do_list = document.querySelector(".to-do");
+  // const doing_list = document.querySelector(".doing");
+  // const done_list = document.querySelector(".done");
+  //  if (to_do_list.appendChild(item)) {
+  //    checkbox.style.display = "none";
+  //  }
+  //  if (doing_list.appendChild(item)) {
+  //    checkbox.style.display = "visible";
+  //  }
+  //  if (done_list.appendChild(item)) {
+  //    checkbox.style.display = "visible";
+  //  }
 
   if (!task_input_value || !description_input_value || !date_input_value) {
     alert("écris des trucs stp");
@@ -40,16 +52,24 @@ export function add_task() {
   // create button doing
   const doing_id = `button_${index}`;
   let doing = document.createElement("button");
-  doing.setAttribute("id", doing_id);
   doing.innerText = "doing";
-  doing.addEventListener("click", () => doing_function(doing, doing_id, item));
-
+  doing.addEventListener("click", () => {
+    doing_function(doing, doing_id, item, index);
+  });
+  // create checkbox
+  const checkbox_id = `checkbox${index}`;
+  let checkbox = document.createElement("input");
+  checkbox.setAttribute("type", "checkbox");
+  checkbox.addEventListener("click", () => {
+    check(checkbox, checkbox_id, item);
+  });
   //   append tout
   item.appendChild(task);
   item.appendChild(description);
   item.appendChild(date);
   item.appendChild(doing);
   item.appendChild(delete_button);
-  list.appendChild(item);
+  item.appendChild(checkbox);
+  to_do_list.appendChild(item);
   local_storage();
 }

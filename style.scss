@@ -11,6 +11,9 @@ body {
         text-align: center;
         padding: 10px;
         background-color: #d4a373;
+        font-family: 'Sacramento';
+        font-size: 50px;
+        font-style: italic;
     }
     .to-do-form {
         padding: 10px;
@@ -18,14 +21,23 @@ body {
         &::placeholder {
             text-align: center;
         }
+        .date-input {
+            cursor: pointer;
+        }
         .submit-btn {
             width: 20px;
             height: 20px;
             border-radius: 10px;
             background-color: lightgreen;
+            transform: scale(1.4);
+            margin-top: 10px;
+            margin: 0 8px 0 8px;
+            cursor: pointer;
         }
         .to-do-selection {
             border-radius: 14px;
+            height: 25px;
+            cursor: pointer;
         }
         .task-input, .text-input {
             &::placeholder {
@@ -35,6 +47,7 @@ body {
         input {
             border: 1px solid black;
             border-radius: 13px;
+            height: 25px;
         }
     }
     .selection {
@@ -59,7 +72,10 @@ body {
         border: 1px solid black;
             li {
                 border: 1px solid black;
-                border-radius: 10px;           
+                border-radius: 10px;
+                    span {
+                        font-weight: 600;
+                    }           
             }
             button {
                 text-transform: capitalize;

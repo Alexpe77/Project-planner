@@ -12,6 +12,9 @@ body h1 {
   text-align: center;
   padding: 10px;
   background-color: #d4a373;
+  font-family: "Sacramento";
+  font-size: 50px;
+  font-style: italic;
 }
 body .to-do-form {
   padding: 10px;
@@ -23,14 +26,23 @@ body .to-do-form::-moz-placeholder {
 body .to-do-form::placeholder {
   text-align: center;
 }
+body .to-do-form .date-input {
+  cursor: pointer;
+}
 body .to-do-form .submit-btn {
   width: 20px;
   height: 20px;
   border-radius: 10px;
   background-color: lightgreen;
+  transform: scale(1.4);
+  margin-top: 10px;
+  margin: 0 8px 0 8px;
+  cursor: pointer;
 }
 body .to-do-form .to-do-selection {
   border-radius: 14px;
+  height: 25px;
+  cursor: pointer;
 }
 body .to-do-form .task-input::-moz-placeholder, body .to-do-form .text-input::-moz-placeholder {
   text-align: center;
@@ -41,6 +53,7 @@ body .to-do-form .task-input::placeholder, body .to-do-form .text-input::placeho
 body .to-do-form input {
   border: 1px solid black;
   border-radius: 13px;
+  height: 25px;
 }
 body .selection {
   text-align: center;
@@ -67,6 +80,9 @@ body .list-container ul {
 body .list-container ul li {
   border: 1px solid black;
   border-radius: 10px;
+}
+body .list-container ul li span {
+  font-weight: 600;
 }
 body .list-container ul button {
   text-transform: capitalize;

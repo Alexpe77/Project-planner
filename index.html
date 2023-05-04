@@ -5,10 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://kit.fontawesome.com/18f626dcdf.js" crossorigin="anonymous"></script>
     <script defer src="./script.js"></script>
     <title>Project Planner</title>
 </head>
 <body>
-    
+    <header>
+        <h1>To Do List</h1>
+    </header>
+    <form class="to-do-form">
+        <input type="text" class="task-input" placeholder="Add a task">
+        <button type="submit" class="submit-btn">
+            <i class="fa-solid fa-circle-plus"></i>
+        </button>
+        <div class="selection">
+            <select name="To Do" class="to-do-selection">
+                <option value="all">To Do</option>
+                <option value="done">Doing</option>
+                <option value="not-done">Done</option>
+            </select>
+        </div>
+    </form>
+    <div class="list-container">
+        <ul class="to-do-list"></ul>
+    </div>
+
 </body>
 </html>

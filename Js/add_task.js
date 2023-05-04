@@ -1,4 +1,5 @@
 import { local_storage } from "./localstorage.js";
+import { doing_function } from "./doing_button.js";
 export function add_task() {
   const task_input_value = document.querySelector(".task-input").value;
   const description_input_value = document.querySelector(".text-input").value;
@@ -37,9 +38,11 @@ export function add_task() {
   delete_button.innerText = "delete";
 
   // create button doing
+  const doing_id = `button_${index}`;
   let doing = document.createElement("button");
-  doing.setAttribute("id", `button${index}`);
+  doing.setAttribute("id", doing_id);
   doing.innerText = "doing";
+  doing.addEventListener("click", () => doing_function(doing, doing_id, item));
 
   //   append tout
   item.appendChild(task);

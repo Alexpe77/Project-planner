@@ -14,26 +14,57 @@ body h1 {
 }
 body .to-do-form {
   padding: 10px;
+  text-align: center;
+}
+body .to-do-form::-moz-placeholder {
+  text-align: center;
+}
+body .to-do-form::placeholder {
+  text-align: center;
+}
+body .to-do-form .submit-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: lightgreen;
+}
+body .to-do-form .to-do-selection {
+  border-radius: 14px;
+}
+body .to-do-form .task-input::-moz-placeholder, body .to-do-form .text-input::-moz-placeholder {
+  text-align: center;
+}
+body .to-do-form .task-input::placeholder, body .to-do-form .text-input::placeholder {
+  text-align: center;
 }
 body .to-do-form input {
-  display: inline-block;
-  flex-direction: row;
   border: 1px solid black;
+  border-radius: 13px;
 }
 body .selection {
   text-align: center;
 }
 body .list-container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-height: 800px;
 }
+body .list-container h3 {
+  padding: 10px;
+}
 body .list-container ul {
-  border: 2px solid red;
+  border-radius: 10px;
   width: 300px;
   min-height: 100px;
   text-align: center;
   background-color: white;
   list-style-type: none;
+}
+body .list-container ul li {
+  border: 1px solid black;
+  border-radius: 10px;
 }
 body .list-container ul button {
   text-transform: capitalize;
@@ -42,7 +73,4 @@ body .list-container ul button {
   background-color: rgb(234, 231, 231);
   border-radius: 10px;
   cursor: pointer;
-}
-body .list-container ul button:hover {
-  background-color: red;
 }/*# sourceMappingURL=style.css.map */

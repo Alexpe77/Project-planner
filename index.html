@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <script src="https://kit.fontawesome.com/18f626dcdf.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/18f626dcdf.js"
+      crossorigin="anonymous"
+    ></script>
     <script type="module" src="./script.js"></script>
     <title>Project Planner</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Project Planner</h1>
+      <h1>Project Planner</h1>
     </header>
     <form class="to-do-form">
-        <input type="text" class="task-input" placeholder="Add a task">
-        <input type="date" class="date-input">
-        <input type="text" class="text-input" placeholder="Add a description of your task">
-        <button type="submit" class="submit-btn">
-            <i class="fa-solid fa-circle-plus"></i>
-        </button>
-        <div class="selection">
-            <select name="To Do" class="to-do-selection">
-                <option value="all">To Do</option>
-                <option value="done">Doing</option>
-                <option value="not-done">Done</option>
-            </select>
-        </div>
+      <input type="text" class="task-input" placeholder="Add a task" />
+      <input type="date" class="date-input" />
+      <input
+        type="text"
+        class="text-input"
+        placeholder="Add a description of your task"
+      />
+      <button type="button" class="submit-btn">
+        <i class="fa-solid fa-circle-plus"></i>
+      </button>
+      <div class="selection">
+        <select name="To Do" class="to-do-selection">
+          <option value="all">All</option>
+          <option value="to-do">To Do</option>
+          <option value="done">Doing</option>
+          <option value="not-done">Done</option>
+        </select>
+      </div>
     </form>
     <div class="list-container">
-        <ul class="to-do-list"></ul>
+      <ul class="to-do-list"></ul>
     </div>
-</body>
+  </body>
 </html>

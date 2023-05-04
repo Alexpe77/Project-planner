@@ -31,10 +31,22 @@ export function add_task() {
   date.setAttribute("id", `date_${index}`);
   date.innerText = date_input_value;
 
+  //  create delete button
+  let delete_button = document.createElement("button");
+  delete_button.setAttribute("id", `delete_${index}`);
+  delete_button.innerText = "delete";
+
+  // create button doing
+  let doing = document.createElement("button");
+  doing.setAttribute("id", `button${index}`);
+  doing.innerText = "doing";
+
   //   append tout
   item.appendChild(task);
   item.appendChild(description);
   item.appendChild(date);
+  item.appendChild(doing);
+  item.appendChild(delete_button);
   list.appendChild(item);
   local_storage();
 }

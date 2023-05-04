@@ -22,10 +22,16 @@ export function get_local_storage() {
       date.setAttribute("id", `date_${i}`);
       date.innerText = taskes.date;
 
+      //   create delete button
+      let delete_button = document.createElement("button");
+      delete_button.setAttribute("id", `delete_${i}`);
+      delete_button.innerText = "delete";
+
       //   append tout
       item.appendChild(task);
       item.appendChild(description);
       item.appendChild(date);
+      item.appendChild(delete_button);
       list.appendChild(item);
     }
   }

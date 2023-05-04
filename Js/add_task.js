@@ -5,7 +5,7 @@ export function add_task() {
   const task_input_value = document.querySelector(".task-input").value;
   const description_input_value = document.querySelector(".text-input").value;
   const date_input_value = document.querySelector(".date-input").value;
-  const to_do_list = document.querySelector(".to-do");
+  const to_do_list = document.querySelector(".to-do-list");
   // const doing_list = document.querySelector(".doing");
   // const done_list = document.querySelector(".done");
   //  if (to_do_list.appendChild(item)) {

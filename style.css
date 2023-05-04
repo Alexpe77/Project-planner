@@ -20,9 +20,6 @@ body .to-do-form {
   padding: 10px;
   text-align: center;
 }
-body .to-do-form::-moz-placeholder {
-  text-align: center;
-}
 body .to-do-form::placeholder {
   text-align: center;
 }
@@ -44,10 +41,8 @@ body .to-do-form .to-do-selection {
   height: 25px;
   cursor: pointer;
 }
-body .to-do-form .task-input::-moz-placeholder, body .to-do-form .text-input::-moz-placeholder {
-  text-align: center;
-}
-body .to-do-form .task-input::placeholder, body .to-do-form .text-input::placeholder {
+body .to-do-form .task-input::placeholder,
+body .to-do-form .text-input::placeholder {
   text-align: center;
 }
 body .to-do-form input {

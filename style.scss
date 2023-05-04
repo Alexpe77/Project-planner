@@ -1,92 +1,91 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: beige;
-    font-family: Verdana, Tahoma, sans-serif;
-    h1 {
-        text-align: center;
-        padding: 10px;
-        background-color: #d4a373;
-        font-family: 'Sacramento';
-        font-size: 50px;
-        font-style: italic;
+  background-color: beige;
+  font-family: Verdana, Tahoma, sans-serif;
+  h1 {
+    text-align: center;
+    padding: 10px;
+    background-color: #d4a373;
+    font-family: "Sacramento";
+    font-size: 50px;
+    font-style: italic;
+  }
+  .to-do-form {
+    padding: 10px;
+    text-align: center;
+    &::placeholder {
+      text-align: center;
     }
-    .to-do-form {
-        padding: 10px;
-        text-align: center;
-        &::placeholder {
-            text-align: center;
-        }
-        .date-input {
-            cursor: pointer;
-        }
-        .submit-btn {
-            width: 20px;
-            height: 20px;
-            border-radius: 10px;
-            background-color: lightgreen;
-            transform: scale(1.4);
-            margin-top: 10px;
-            margin: 0 8px 0 8px;
-            cursor: pointer;
-        }
-        .to-do-selection {
-            border-radius: 14px;
-            height: 25px;
-            cursor: pointer;
-        }
-        .task-input, .text-input {
-            &::placeholder {
-                text-align: center;
-            }
-        }
-        input {
-            border: 1px solid black;
-            border-radius: 13px;
-            height: 25px;
-        }
+    .date-input {
+      cursor: pointer;
     }
-    .selection {
-        text-align: center;   
+    .submit-btn {
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      background-color: lightgreen;
+      transform: scale(1.4);
+      margin-top: 10px;
+      margin: 0 8px 0 8px;
+      cursor: pointer;
     }
-    .list-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-height: 800px;
-        h3 {
-            padding: 10px;
-        }
-        ul {
-        border-radius: 10px;
-        width: 300px;
-        min-height: 100px;
+    .to-do-selection {
+      border-radius: 14px;
+      height: 25px;
+      cursor: pointer;
+    }
+    .task-input,
+    .text-input {
+      &::placeholder {
         text-align: center;
-        background-color: #faedcd;
-        list-style-type: none;
+      }
+    }
+    input {
+      border: 1px solid black;
+      border-radius: 13px;
+      height: 25px;
+    }
+  }
+  .selection {
+    text-align: center;
+  }
+  .list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 800px;
+    h3 {
+      padding: 10px;
+    }
+    ul {
+      border-radius: 10px;
+      width: 300px;
+      min-height: 100px;
+      text-align: center;
+      background-color: #faedcd;
+      list-style-type: none;
+      border: 1px solid black;
+      li {
         border: 1px solid black;
-            li {
-                border: 1px solid black;
-                border-radius: 10px;
-                    span {
-                        font-weight: 600;
-                    }           
-            }
-            button {
-                text-transform: capitalize;
-                margin-left: 10px;
-                padding: 0 5px 0 5px ;
-                background-color: rgb(234, 231, 231);
-                border-radius: 10px;
-                cursor: pointer;
-            }
+        border-radius: 10px;
+        span {
+          font-weight: 600;
         }
+      }
+      button {
+        text-transform: capitalize;
+        margin-left: 10px;
+        padding: 0 5px 0 5px;
+        background-color: rgb(234, 231, 231);
+        border-radius: 10px;
+        cursor: pointer;
+      }
     }
+  }
 }
-
-

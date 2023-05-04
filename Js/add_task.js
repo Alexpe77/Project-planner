@@ -1,3 +1,4 @@
+import { local_storage } from "./localstorage.js";
 export function add_task() {
   const task_input_value = document.querySelector(".task-input").value;
   const description_input_value = document.querySelector(".text-input").value;
@@ -15,13 +16,17 @@ export function add_task() {
   let item = document.createElement("li");
   item.setAttribute("id", `item_${index}`);
 
-  //  create task/description/date items
+  //  create task
   let task = document.createElement("span");
   task.setAttribute("id", `task_${index}`);
   task.innerText = task_input_value;
+
+  // create description
   let description = document.createElement("p");
   description.setAttribute("id", `description_${index}`);
-  description.innerText = description_input_value;
+  description.innerHTML = description_input_value;
+
+  // create date
   let date = document.createElement("span");
   date.setAttribute("id", `date_${index}`);
   date.innerText = date_input_value;
@@ -31,4 +36,5 @@ export function add_task() {
   item.appendChild(description);
   item.appendChild(date);
   list.appendChild(item);
+  local_storage();
 }

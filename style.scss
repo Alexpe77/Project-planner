@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: beige;
+    font-family: Verdana, Tahoma, sans-serif;
+    h1 {
+        text-align: center;
+        padding: 10px;
+    }
+    .to-do-form {
+        padding: 10px;
+        input {
+            display: inline-block;
+            flex-direction: row;
+            border: 1px solid black;
+        }
+    }
+    .selection {
+        text-align: center;   
+    }
+    .list-container {
+        display: flex;
+        max-height: 800px;
+        ul {
+        border: 2px solid red;
+        width: 300px;
+        min-height: 100px;
+        text-align: center;
+        background-color: white;
+        list-style-type: none;
+        button {
+            text-transform: capitalize;
+            margin-left: 10px;
+            padding: 0 5px 0 5px ;
+            background-color: rgb(234, 231, 231);
+            border-radius: 10px;
+            cursor: pointer;
+            &:hover {
+                background-color: red;
+            }
+        }
+        }
+    }
+}
+
+

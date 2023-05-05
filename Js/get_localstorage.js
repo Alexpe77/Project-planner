@@ -72,8 +72,20 @@ export function get_local_storage() {
         let remainingSeconds = Math.floor(
           (remaining_time % (1000 * 60)) / 1000
         );
-        let time_left = `${remainingDays}days ${remainingHours}h ${remainingMinutes}min ${remainingSeconds}sec`;
-        date.innerText = time_left;
+        if (remainingDays <= 0) {
+          date.innerText = `${remainingHours}h ${remainingMinutes}min ${remainingSeconds}sec`;
+        }
+        if (remainingDays > 0) {
+          date.innerText = `${remainingDays}days`;
+        } else if (
+          remainingDays <= 0 &&
+          remainingHours <= 0 &&
+          remainingMinutes <= 0 &&
+          remainingSeconds <= 0
+        ) {
+          date.innerText = "en retard";
+          return;
+        }
       }, 1000);
     }
   }

@@ -32,8 +32,6 @@ export function add_task() {
   description.innerHTML = description_input_value;
 
   // create date
-  // let date_localstorage = date_input_value;
-  // date_localstorage.setAttribute("id", `date_localstorage${index}`);
   let date = document.createElement("span");
   date.setAttribute("id", `date_${index}`);
 

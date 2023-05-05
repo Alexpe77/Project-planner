@@ -6,9 +6,6 @@ export function get_local_storage() {
   if (tasks) {
     for (let i = 0; i < tasks.length; i++) {
       const taskes = tasks[i];
-      const date_input_value = new Date(
-        document.getElementById(`date_${i}`).value
-      );
       const list = document.querySelector("ul");
       let item = document.createElement("li");
       item.setAttribute("id", `taskes_${i}`);
@@ -51,15 +48,10 @@ export function get_local_storage() {
       checkbox.addEventListener("click", () => {
         check(checkbox, checkbox_id, item);
       });
+      const date_input_value = new Date(date);
 
       //   append tout
-      item.appendChild(task);
-      item.appendChild(description);
-      item.appendChild(date);
-      item.appendChild(doing);
-      item.appendChild(delete_button);
-      item.appendChild(checkbox);
-      list.appendChild(item);
+
       setInterval(() => {
         let remaining_time = date_input_value - new Date();
         let remainingDays = Math.floor(remaining_time / (1000 * 60 * 60 * 24));
@@ -87,6 +79,13 @@ export function get_local_storage() {
           return;
         }
       }, 1000);
+      item.appendChild(task);
+      item.appendChild(description);
+      item.appendChild(date);
+      item.appendChild(doing);
+      item.appendChild(delete_button);
+      item.appendChild(checkbox);
+      list.appendChild(item);
     }
   }
 }

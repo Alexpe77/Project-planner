@@ -32,11 +32,15 @@ export function add_task() {
   description.innerHTML = description_input_value;
 
   // create date
+  // let date_localstorage = date_input_value;
+  // date_localstorage.setAttribute("id", `date_localstorage${index}`);
   let date = document.createElement("span");
   date.setAttribute("id", `date_${index}`);
+
   //  create delete button
   let delete_button = document.createElement("button");
   delete_button.setAttribute("id", `delete_${index}`);
+  delete_button.classList.add(`delete_btn`);
   delete_button.innerText = "delete";
   delete_button.addEventListener("click", () => {
     remove(item);
@@ -75,8 +79,6 @@ export function add_task() {
       (remaining_time % (1000 * 60 * 60)) / (1000 * 60)
     );
     let remainingSeconds = Math.floor((remaining_time % (1000 * 60)) / 1000);
-    // let time_left = `${remainingDays}days ${remainingHours}h ${remainingMinutes}min ${remainingSeconds}sec`;
-    // date.innerText = time_left;
     if (remainingDays <= 0) {
       date.innerText = `${remainingHours}h ${remainingMinutes}min ${remainingSeconds}sec`;
     }

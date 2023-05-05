@@ -7,7 +7,7 @@ export function get_local_storage() {
     for (let i = 0; i < tasks.length; i++) {
       const taskes = tasks[i];
       const date_input_value = new Date(
-        document.querySelector(".date-input").value
+        document.getElementById(`date_${i}`).value
       );
       const list = document.querySelector("ul");
       let item = document.createElement("li");

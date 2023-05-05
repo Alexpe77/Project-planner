@@ -1,4 +1,4 @@
-export function doing_function(doing, doing_id, item) {
+export function doing_function(doing, doing_id, item, checkbox) {
   doing.classList.toggle(doing_id);
   const to_do = document.querySelector(".to-do-list");
   const doing_list = document.querySelector(".doing");

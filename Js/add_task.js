@@ -4,19 +4,10 @@ import { check } from "./check_function.js";
 export function add_task() {
   const task_input_value = document.querySelector(".task-input").value;
   const description_input_value = document.querySelector(".text-input").value;
-  const date_input_value = document.querySelector(".date-input").value;
+  const date_input_value = new Date(
+    document.querySelector(".date-input").value
+  );
   const to_do_list = document.querySelector(".to-do-list");
-  // const doing_list = document.querySelector(".doing");
-  // const done_list = document.querySelector(".done");
-  //  if (to_do_list.appendChild(item)) {
-  //    checkbox.style.display = "none";
-  //  }
-  //  if (doing_list.appendChild(item)) {
-  //    checkbox.style.display = "visible";
-  //  }
-  //  if (done_list.appendChild(item)) {
-  //    checkbox.style.display = "visible";
-  //  }
 
   if (!task_input_value || !description_input_value || !date_input_value) {
     alert("écris des trucs stp");
@@ -42,8 +33,6 @@ export function add_task() {
   // create date
   let date = document.createElement("span");
   date.setAttribute("id", `date_${index}`);
-  date.innerText = date_input_value;
-
   //  create delete button
   let delete_button = document.createElement("button");
   delete_button.setAttribute("id", `delete_${index}`);
@@ -54,7 +43,7 @@ export function add_task() {
   let doing = document.createElement("button");
   doing.innerText = "doing";
   doing.addEventListener("click", () => {
-    doing_function(doing, doing_id, item, index);
+    doing_function(doing, doing_id, item, index, checkbox);
   });
   // create checkbox
   const checkbox_id = `checkbox${index}`;
@@ -63,6 +52,7 @@ export function add_task() {
   checkbox.addEventListener("click", () => {
     check(checkbox, checkbox_id, item);
   });
+
   //   append tout
   item.appendChild(task);
   item.appendChild(description);
@@ -71,5 +61,19 @@ export function add_task() {
   item.appendChild(delete_button);
   item.appendChild(checkbox);
   to_do_list.appendChild(item);
+  setInterval(() => {
+    let remaining_time = date_input_value - new Date();
+    let remainingDays = Math.floor(remaining_time / (1000 * 60 * 60 * 24));
+    let remainingHours = Math.floor(
+      (remaining_time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    let remainingMinutes = Math.floor(
+      (remaining_time % (1000 * 60 * 60)) / (1000 * 60)
+    );
+    let remainingSeconds = Math.floor((remaining_time % (1000 * 60)) / 1000);
+    let time_left = `${remainingDays}days ${remainingHours}h ${remainingMinutes}min ${remainingSeconds}sec`;
+    date.innerText = time_left;
+  }, 1000);
+
   local_storage();
 }

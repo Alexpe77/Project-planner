@@ -4,4 +4,5 @@ const submit_btn = document.querySelector(".submit-btn");
 submit_btn.addEventListener("click", () => {
   add_task();
 });
+
 get_local_storage();

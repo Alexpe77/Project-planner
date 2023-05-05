@@ -20,6 +20,9 @@ body .to-do-form {
   padding: 10px;
   text-align: center;
 }
+body .to-do-form::-moz-placeholder {
+  text-align: center;
+}
 body .to-do-form::placeholder {
   text-align: center;
 }
@@ -41,6 +44,9 @@ body .to-do-form .to-do-selection {
   height: 25px;
   cursor: pointer;
 }
+body .to-do-form .task-input::-moz-placeholder, body .to-do-form .text-input::-moz-placeholder {
+  text-align: center;
+}
 body .to-do-form .task-input::placeholder,
 body .to-do-form .text-input::placeholder {
   text-align: center;
@@ -53,12 +59,16 @@ body .to-do-form input {
 body .selection {
   text-align: center;
 }
+body input[type=checkbox] {
+  accent-color: lightgreen;
+  width: 15px;
+  height: 15px;
+}
 body .list-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-height: 800px;
 }
 body .list-container h3 {
   padding: 10px;
@@ -78,6 +88,10 @@ body .list-container ul li {
 }
 body .list-container ul li span {
   font-weight: 600;
+  margin: 20px;
+}
+body .list-container ul li p {
+  font-style: italic;
 }
 body .list-container ul button {
   text-transform: capitalize;

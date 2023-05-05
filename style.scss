@@ -54,12 +54,17 @@ body {
   .selection {
     text-align: center;
   }
+
+  input[type="checkbox"] {
+    accent-color: lightgreen;
+    width: 15px;
+    height: 15px;
+  }
   .list-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-height: 800px;
     h3 {
       padding: 10px;
     }
@@ -76,6 +81,10 @@ body {
         border-radius: 10px;
         span {
           font-weight: 600;
+          margin: 20px;
+        }
+        p {
+          font-style: italic;
         }
       }
       button {

@@ -39,16 +39,11 @@ body {
       height: 25px;
       cursor: pointer;
     }
-    .task-input,
-    .text-input {
-      &::placeholder {
-        text-align: center;
-      }
-    }
     input {
       border: 1px solid black;
       border-radius: 13px;
       height: 25px;
+      text-align: center;
     }
   }
   .selection {
@@ -59,6 +54,8 @@ body {
     accent-color: lightgreen;
     width: 15px;
     height: 15px;
+    cursor: pointer;
+    border-radius: 0.15em;
   }
   .list-container {
     display: flex;
@@ -75,21 +72,25 @@ body {
       text-align: center;
       background-color: #faedcd;
       list-style-type: none;
-      border: 1px solid black;
-      li {
+      border: 1px 0 1px 0 solid black;
+        li {
         border: 1px solid black;
         border-radius: 10px;
         span {
           font-weight: 600;
           margin: 20px;
+          text-transform: capitalize;
         }
         p {
           font-style: italic;
+          text-transform: capitalize;
+          padding: 15px;
         }
       }
       button {
         text-transform: capitalize;
-        margin-left: 10px;
+        text-align: center;
+        margin: 15px 10px 10px 10px ;
         padding: 0 5px 0 5px;
         background-color: rgb(234, 231, 231);
         border-radius: 10px;

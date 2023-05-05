@@ -44,17 +44,11 @@ body .to-do-form .to-do-selection {
   height: 25px;
   cursor: pointer;
 }
-body .to-do-form .task-input::-moz-placeholder, body .to-do-form .text-input::-moz-placeholder {
-  text-align: center;
-}
-body .to-do-form .task-input::placeholder,
-body .to-do-form .text-input::placeholder {
-  text-align: center;
-}
 body .to-do-form input {
   border: 1px solid black;
   border-radius: 13px;
   height: 25px;
+  text-align: center;
 }
 body .selection {
   text-align: center;
@@ -63,6 +57,8 @@ body input[type=checkbox] {
   accent-color: lightgreen;
   width: 15px;
   height: 15px;
+  cursor: pointer;
+  border-radius: 0.15em;
 }
 body .list-container {
   display: flex;
@@ -80,7 +76,7 @@ body .list-container ul {
   text-align: center;
   background-color: #faedcd;
   list-style-type: none;
-  border: 1px solid black;
+  border: 1px 0 1px 0 solid black;
 }
 body .list-container ul li {
   border: 1px solid black;
@@ -89,13 +85,17 @@ body .list-container ul li {
 body .list-container ul li span {
   font-weight: 600;
   margin: 20px;
+  text-transform: capitalize;
 }
 body .list-container ul li p {
   font-style: italic;
+  text-transform: capitalize;
+  padding: 15px;
 }
 body .list-container ul button {
   text-transform: capitalize;
-  margin-left: 10px;
+  text-align: center;
+  margin: 15px 10px 10px 10px;
   padding: 0 5px 0 5px;
   background-color: rgb(234, 231, 231);
   border-radius: 10px;

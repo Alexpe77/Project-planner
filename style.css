@@ -27,19 +27,24 @@ body .to-do-form::placeholder {
   text-align: center;
 }
 body .to-do-form .date-input {
+  width: 130px;
   cursor: pointer;
+  padding-top: 4px;
+  margin-bottom: 5px;
 }
 body .to-do-form .submit-btn {
   width: 20px;
   height: 20px;
   border-radius: 10px;
-  background-color: lightgreen;
+  border: 1px solid lightgray;
   transform: scale(1.4);
-  margin-top: 10px;
-  margin: 0 8px 0 8px;
+  margin: 10px 8px 0 8px;
+  padding-bottom: 1px;
   cursor: pointer;
 }
 body .to-do-form .to-do-selection {
+  padding-left: 10px;
+  border: 1px solid lightgray;
   border-radius: 14px;
   height: 25px;
   cursor: pointer;
@@ -59,6 +64,7 @@ body input[type=checkbox] {
   height: 15px;
   cursor: pointer;
   border-radius: 0.15em;
+  margin-left: 10px;
 }
 body .list-container {
   display: flex;
@@ -101,6 +107,7 @@ body .list-container ul button {
   padding: 0 5px 0 5px;
   background-color: rgb(234, 231, 231);
   border-radius: 10px;
+  border: 1px solid black;
   cursor: pointer;
 }
 body .list-container ul .delete_btn:hover {

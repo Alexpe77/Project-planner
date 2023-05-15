@@ -16,6 +16,12 @@ body h1 {
   font-size: 50px;
   font-style: italic;
 }
+body .to-do-list input[type=checkbox] {
+  visibility: hidden;
+}
+body .doing input[type=checkbox] {
+  visibility: visible;
+}
 body .to-do-form {
   padding: 10px;
   text-align: center;

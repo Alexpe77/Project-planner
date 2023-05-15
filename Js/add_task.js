@@ -5,9 +5,8 @@ import { remove } from "./remove_function.js";
 export function add_task() {
   const task_input_value = document.querySelector(".task-input").value;
   const description_input_value = document.querySelector(".text-input").value;
-  const date_input_value = new Date(
-    document.querySelector(".date-input").value
-  );
+  const input_date = document.querySelector(".date-input").value;
+  const date_input_value = new Date(input_date);
   const to_do_list = document.querySelector(".to-do-list");
 
   if (!task_input_value || !description_input_value || !date_input_value) {
@@ -51,22 +50,15 @@ export function add_task() {
   doing.addEventListener("click", () => {
     doing_function(doing, doing_id, item, index, checkbox);
   });
+
   // create checkbox
   const checkbox_id = `checkbox${index}`;
   let checkbox = document.createElement("input");
+  checkbox.setAttribute("id", checkbox_id);
   checkbox.setAttribute("type", "checkbox");
   checkbox.addEventListener("click", () => {
     check(checkbox, checkbox_id, item);
   });
-
-  //   append tout
-  item.appendChild(task);
-  item.appendChild(description);
-  item.appendChild(date);
-  item.appendChild(doing);
-  item.appendChild(delete_button);
-  item.appendChild(checkbox);
-  to_do_list.appendChild(item);
   setInterval(() => {
     let remaining_time = date_input_value - new Date();
     let remainingDays = Math.floor(remaining_time / (1000 * 60 * 60 * 24));
@@ -91,7 +83,17 @@ export function add_task() {
       date.innerText = "en retard";
       return;
     }
-  }, 1000);
+  }, 0);
+
+  //   append tout
+  item.appendChild(task);
+  item.appendChild(description);
+  item.appendChild(date);
+  item.appendChild(doing);
+  item.appendChild(delete_button);
+  item.appendChild(checkbox);
+  to_do_list.appendChild(item);
+  console.log(item);
 
   local_storage();
 }

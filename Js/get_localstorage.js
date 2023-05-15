@@ -22,7 +22,6 @@ export function get_local_storage() {
 
       // create date
       let date = document.createElement("span");
-      date.setAttribute("id", `date_${i}`);
       date.innerText = taskes.date;
 
       //   create delete button
@@ -48,7 +47,7 @@ export function get_local_storage() {
       checkbox.addEventListener("click", () => {
         check(checkbox, checkbox_id, item);
       });
-      const date_input_value = new Date(date);
+      const date_input_value = date;
 
       //   append tout
 
@@ -78,7 +77,7 @@ export function get_local_storage() {
           date.innerText = "en retard";
           return;
         }
-      }, 1000);
+      }, 0);
       item.appendChild(task);
       item.appendChild(description);
       item.appendChild(date);

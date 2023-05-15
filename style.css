@@ -12,7 +12,7 @@ body h1 {
   text-align: center;
   padding: 10px;
   background-color: #d4a373;
-  text-shadow: rgb(85, 52, 4) 1px 0 10px;
+  text-shadow: #FAEDCD 1px 0 10px;
   font-family: "Sacramento";
   font-size: 50px;
   font-style: italic;
@@ -60,7 +60,8 @@ body .to-do-form .submit-btn i:hover {
 }
 body .to-do-form .to-do-selection {
   padding-left: 10px;
-  border: 1px solid lightgray;
+  border: 1px solid black;
+  background-color: white;
   border-radius: 14px;
   height: 25px;
   cursor: pointer;
@@ -119,6 +120,7 @@ body .list-container ul li p {
 body .list-container ul button {
   text-transform: capitalize;
   text-align: center;
+  letter-spacing: 0.5px;
   margin: 15px 10px 10px 10px;
   padding: 0 5px 0 5px;
   background-color: rgb(234, 231, 231);

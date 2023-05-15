@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: beige;
+  font-family: Verdana, Tahoma, sans-serif;
+  h1 {
+    text-align: center;
+    padding: 10px;
+    background-color: #d4a373;
+    text-shadow: #FAEDCD 1px 0 10px;
+    font-family: "Sacramento";
+    font-size: 50px;
+    font-style: italic;
+  }
+  .to-do-list {
+    input[type="checkbox"] {
+      visibility: hidden;
+    }
+  }
+  .doing {
+    input[type="checkbox"] {
+      visibility: visible;
+    }
+  }
+  .to-do-form {
+    padding: 10px;
+    text-align: center;
+    &::placeholder {
+      text-align: center;
+    }
+    .date-input {
+      width: 130px;
+      cursor: pointer;
+      padding-top: 4px;
+      margin-bottom: 5px;
+    }
+    .submit-btn {
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      border: 1px solid lightgray;
+      margin: 10px 8px 0 8px;
+      padding-bottom: 1px;
+      cursor: pointer;
+      &:hover {
+        background-color: lightgreen;
+      }
+        i {
+          transform: scale(1.9);
+          &:hover {
+            border: 2px solid lightgreen;
+            border-radius: 50%;
+            }
+        }
+    }
+    .to-do-selection {
+      padding-left: 10px;
+      border: 1px solid black;
+      background-color: white;
+      border-radius: 14px;
+      height: 25px;
+      cursor: pointer;
+    }
+    input {
+      border: 1px solid black;
+      border-radius: 13px;
+      height: 25px;
+      text-align: center;
+    }
+  }
+  .selection {
+    text-align: center;
+  }
+
+  input[type="checkbox"] {
+    accent-color: lightgreen;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    border-radius: 0.15em;
+    margin-left: 10px;
+  }
+  .list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3 {
+      padding: 10px;
+      font-family: 'Mynerve', cursive;
+      font-size: 26px;
+    }
+    ul {
+      border-radius: 10px;
+      width: 500px;
+      min-height: 100px;
+      text-align: center;
+      background-color: #faedcd;
+      list-style-type: none;
+      border: 1px 0 1px 0 solid black;
+        li {
+        border: 1px solid black;
+        border-radius: 10px;
+        span {
+          font-weight: 600;
+          margin: 20px;
+          text-transform: capitalize;
+        }
+        p {
+          font-style: italic;
+          text-transform: capitalize;
+          padding: 15px;
+        }
+      }
+      button {
+        text-transform: capitalize;
+        text-align: center;
+        letter-spacing: 0.5px;
+        margin: 15px 10px 10px 10px ;
+        padding: 0 5px 0 5px;
+        background-color: rgb(234, 231, 231);
+        border-radius: 10px;
+        border: 1px solid black;
+        cursor: pointer;
+      }
+      .delete_btn {
+        &:hover {
+          background-color: red;
+        }
+      }
+    }
+  }
+}

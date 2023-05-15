@@ -11,6 +11,7 @@ body {
     text-align: center;
     padding: 10px;
     background-color: #d4a373;
+    text-shadow: rgb(85, 52, 4) 1px 0 10px;
     font-family: "Sacramento";
     font-size: 50px;
     font-style: italic;
@@ -42,10 +43,19 @@ body {
       height: 20px;
       border-radius: 10px;
       border: 1px solid lightgray;
-      transform: scale(1.4);
       margin: 10px 8px 0 8px;
       padding-bottom: 1px;
       cursor: pointer;
+      &:hover {
+        background-color: lightgreen;
+      }
+        i {
+          transform: scale(1.9);
+          &:hover {
+            border: 2px solid lightgreen;
+            border-radius: 50%;
+            }
+        }
     }
     .to-do-selection {
       padding-left: 10px;

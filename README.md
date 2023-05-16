@@ -21,5 +21,5 @@ This is the list of features we created :
 
 ## Authors
 
-[@Ethanosaure]
-and me [@Alexpe77]
+- [@Ethanosaure] (https://github.com/Ethanosaure)
+- [@Alexpe77] (https://github.com/Alexpe77)

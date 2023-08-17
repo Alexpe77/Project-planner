@@ -12,7 +12,7 @@ This is the list of features we created :
 - Filter tasks (ex: only show "to do" tasks)
 - Save tasks in LocalStorage, so that they persist even when the page is refreshed.
 
-## The learning objectives was :
+## Learning objectives
 
 - Dynamic DOM manipulation
 - Handling of dates
@@ -23,3 +23,7 @@ This is the list of features we created :
 
 - [@Ethanosaure] (https://github.com/Ethanosaure)
 - [@Alexpe77] (https://github.com/Alexpe77)
+
+## Screen shot
+
+![Project planner](img/screen.png)
